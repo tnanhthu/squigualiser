@@ -173,7 +173,7 @@ def plot_function(p, read_id, signal_tuple, sig_algn_data, fasta_sequence, base_
             base_y.append(label_position)
             label = str(base) + "\n" + str(base_index + 1)
             base_label.append(label)
-            base_label_colors.append('black')
+            base_label_colors.append('darkgrey')
 
             if kmer_start+kmer_length < len(fasta_sequence) and kmer_start > -1:
                 kmer_text = "{}'{}'{}".format(fasta_sequence[kmer_start:base_index],fasta_sequence[base_index],fasta_sequence[base_index+1:kmer_start+kmer_length])
@@ -199,7 +199,7 @@ def plot_function(p, read_id, signal_tuple, sig_algn_data, fasta_sequence, base_
         k += 1
 
     line_segment_source = ColumnDataSource(dict(x=line_segment_x, x1=line_segment_x, y=[y_min]*len(line_segment_x), y1=[y_max]*len(line_segment_x)))
-    glyph = Segment(x0="x", y0="y", x1="x1", y1="y1", line_color="saddlebrown", line_width=1)
+    glyph = Segment(x0="x", y0="y", x1="x1", y1="y1", line_color="grey", line_width=1)
 
     base_annotation = ColumnDataSource(data=dict(base_x=base_x, base_y=base_y, base_label=base_label, colors=base_label_colors))
     base_annotation_labels = LabelSet(x='base_x', y='base_y', text='base_label', x_offset=5, y_offset=5, source=base_annotation, text_font_size="9pt", text_color='colors')
