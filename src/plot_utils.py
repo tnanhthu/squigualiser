@@ -107,7 +107,7 @@ def svg_export_works(output_dir):
         raise RuntimeError(f"SVG export requires a headless browser. None (Firefox+geckodriver or Chromium+chromedriver) found in the PATH : {e}")
 
 def get_base_color_map():
-    base_color_map = {'A': '#d6f5d6', 'C': '#ccccff', 'T': '#ffcccc', 'G': '#ffedcc', 'U': '#ffcccc', 'N': '#fafafe', 'M': '#000000', 'R': '#000000', 'W': '#000000', 'S': '#000000', 'Y': '#000000', 'K': '#000000', 'V': '#000000', 'H': '#000000', 'D': '#000000', 'B': '#000000'}
+    base_color_map = {'A': '4bcc4880', 'C': '#4ad3f17a', 'T': '#ff44ff51', 'G': '#ffde3696', 'U': '#ff44ff51', 'N': '#fafafe', 'M': '#000000', 'R': '#000000', 'W': '#000000', 'S': '#000000', 'Y': '#000000', 'K': '#000000', 'V': '#000000', 'H': '#000000', 'D': '#000000', 'B': '#000000'}
     return base_color_map
 
 def adjust_before_plotting(ref_seq_len, signal_tuple, region_tuple, sig_algn_data, fasta_seq, draw_data):
